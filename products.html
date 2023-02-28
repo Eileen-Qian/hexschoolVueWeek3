@@ -73,6 +73,7 @@
             </tbody>
           </table>
           <p>目前有 <span>{{ products.length }}</span> 項產品</p>
+
         </div>
         <!-- 產品細節 -->
         <div class="row">
@@ -138,12 +139,16 @@
                           @click="tempProduct.imagesUrl.push('')">
                           新增圖片
                         </button>
-                        <button class="btn btn-outline-danger btn-sm d-block w-100" v-else 
+                        <button class="btn btn-outline-danger btn-sm d-block w-100" v-else
                           @click="tempProduct.imagesUrl.pop()">
                           刪除圖片
                         </button>
                       </div>
 
+                      <div v-else>
+                        <button class="btn btn-outline-primary btn-sm d-block w-100 mb-2" @click="createImg">新增圖片
+                      </button>
+                      </div>
 
                     </div>
 
